@@ -102,7 +102,7 @@ class RaidTester:
                 task.kill()
 
             try:
-                task = hdparm(*hdArguments,_bg=True); x.wait()
+                task = hdparm(*hdArguments,_bg=True); task.wait()
 
             except KeyboardInterrupt:
                 task.kill()
