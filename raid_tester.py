@@ -1,5 +1,4 @@
 from sh import dd, hdparm, Command, grep
-import sys
 
 class RaidTester:
 
