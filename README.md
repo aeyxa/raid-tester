@@ -9,6 +9,7 @@ wget https://raw.githubusercontent.com/aeyxa/raid-tester/master/raid_tester.py
 
 
 ### Dependencies
+--
 This script expects multiple programs to be installed and accessible on the system:
 
 ```
@@ -17,7 +18,7 @@ MegaCli, python-setuptools, easy_install sh, hdparm
   
 
 ### Note
-
+--
 This script expects a device to be passed when running the script:
 
 ```
@@ -28,5 +29,5 @@ The current testing platform we currently implement would be to create two raid 
 
 
 ### Warning
-
+--
 >Failure to create a raid in a correct manner for which this script can write large amounts of data (over 80GB) may result in data to your file system, such as total operating system loss, failed hard drives and raid card failure. Please do not run this script on an important environment, it should only be used on a stand alone server specifically build for the purposes of testing raid cards.
