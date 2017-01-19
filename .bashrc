@@ -25,6 +25,8 @@ raid_tester_info()
     echo "For more information:"
     echo "    vim ~/raid_tester/readme.txt"
     echo
+    echo "Tmux command to gain terminal access: "
+    echo "    ctrl+b THEN ctrl+% OR ctrl+"     "
     echo
     echo
     echo "################################################"
