@@ -7,6 +7,7 @@ class RaidTester:
         self.__device = sys.argv[1]
         self.__output = "/root/raid_tester/through.test"
 
+        
     def __call__(self):
         self.__PhaseOne()
         self.__PhaseTwo()
