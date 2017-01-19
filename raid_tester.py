@@ -14,6 +14,7 @@ class RaidTester:
         self.__PhaseThree()
 
 
+        
     def __PhaseOne(self):
 
         def writeToEmpty():
@@ -50,6 +51,7 @@ class RaidTester:
                 task.kill()
 
            
+        
     def __PhaseTwo(self):
 
         def WriteWoutCaching():
@@ -154,5 +156,6 @@ class RaidTester:
                 print("Error %s" % function)
 
   
+
 tester = RaidTester()
 tester()
