@@ -12,7 +12,7 @@ wget https://raw.githubusercontent.com/aeyxa/raid-tester/master/raid_tester.py
 This script expects multiple programs to be installed and accessible on the system:
 
 ```
-MegaCli, python-setuptools, easy_install sh, hdparm
+MegaCli, python-setuptools, easy_install sh, hdparm, tmux
 ```
   
 
