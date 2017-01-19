@@ -36,7 +36,7 @@ raid_tester_info()
     echo " script from automatically executing, please    "
     echo " comment out the 'automatic_raid_tester' bottom "
     echo " line in vim ~/.bashrc, leaving the other lines "
-    echo " untouched or unchanged.                        "
+    echo " untouched and unchanged.                       "
     echo
     echo "################################################"
     echo
