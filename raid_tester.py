@@ -5,7 +5,7 @@ class RaidTester:
 
     def __init__(self):
         self.__device = sys.argv[1]
-        self.__file = "/root/raid_tester/through.test"
+        self.__output = "/root/raid_tester/through.test"
 
     def __call__(self):
         self.__PhaseOne()
@@ -29,7 +29,7 @@ class RaidTester:
 
         def WriteToAFile():
             infile = "if=/dev/zero"
-            outfile = "of=/root/through.test"
+            outfile = self.__output
             bytesize = "bs=1G"
             count = "count=80"
             oflag = "oflag=sync"
@@ -113,7 +113,7 @@ class RaidTester:
        def __PhaseThree(self):
 
             def SpeedTest():
-                infile = "if=%s" % self.__file
+                infile = "if=%s" % self.__output
                 outfile = "of=/dev/null"
                 bs = "bs=1024"
 
@@ -141,7 +141,7 @@ class RaidTester:
 
 
             def CleanTest():
-                rm(self.__file)
+                rm(self.__output)
 
 
         functions = [ SpeedTest, ErrorTest, CleanTest ]
