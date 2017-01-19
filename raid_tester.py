@@ -49,8 +49,7 @@ class RaidTester:
             except KeyboardInterrupt:
                 task.kill()
 
-
-
+           
     def __PhaseTwo(self):
 
         def WriteWoutCaching():
@@ -154,6 +153,6 @@ class RaidTester:
             except:
                 print("Error %s" % function)
 
-
+  
 tester = RaidTester()
 tester()
