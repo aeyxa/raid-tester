@@ -13,6 +13,7 @@ This script expects multiple programs to be installed and accessible on the syst
 ### Note
 
 This script expects a device to be passed when running the script:
+
   python raid_tester.py /dev/sdb
   
 The current testing platform we currently implement would be to create two raid 5 arrays on three drives. One array taking up 120GB of space with CentOS 7 being installed on that array. Then another array taking up the rest of the space (this would be /dev/sdb). Whatever the "data" raid array is on is what needs to be passed when calling the script.
