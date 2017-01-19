@@ -54,5 +54,4 @@ automatic_raid_tester()
     fi
 }
 
-# Comment out this line to prevent automatic testing
-automatic_raid_tester
+automatic_raid_tester # Comment out this line to prevent automatic testing
