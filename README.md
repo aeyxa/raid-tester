@@ -27,4 +27,4 @@ The current testing platform we currently implement would be to create two raid 
 
 
 ## Warning
->Failure to create a raid in a correct manner for which this script can write large amounts of data (over 80GB) may result in damage to your file system, such as total operating system loss, failed hard drives and raid card failure. Please do not run this script on an important environment, it should only be used on a stand alone server specifically build for the purposes of testing raid cards.
+>Failure to create a raid in a correct manner for which this script can write large amounts of data (over 80GB) may result in damage to your file system, such as total operating system loss, failed hard drives and raid card failure. Please do not run this script on an important environment, it should only be used on a stand alone server specifically built for the purposes of testing raid cards.
