@@ -41,8 +41,6 @@ raid_tester_info()
     echo " untouched and unchanged.                       "
     echo
     echo "################################################"
-    echo
-    echo
 }
 
 automatic_raid_tester()
