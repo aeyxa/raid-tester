@@ -7,14 +7,14 @@ class RaidTester:
         self.__device = sys.argv[1]
         self.__output = "/root/raid_tester/through.test"
 
-        
+
     def __call__(self):
         self.__PhaseOne()
         self.__PhaseTwo()
         self.__PhaseThree()
 
 
-        
+
     def __PhaseOne(self):
 
         def writeToEmpty():
@@ -50,8 +50,8 @@ class RaidTester:
             except KeyboardInterrupt:
                 task.kill()
 
-           
-        
+
+
     def __PhaseTwo(self):
 
         def WriteWoutCaching():
@@ -149,16 +149,17 @@ class RaidTester:
             rm(self.__output)
 
 
-    functions = [ SpeedTest, ErrorTest, CleanTest ]
+        functions = [ SpeedTest(), ErrorTest(), CleanTest() ]
 
-    for function in functions:
-        try:
-            function()
+        for function in functions:
 
-        except:
-            print("Error %s" % function)
+            try:
+                function
 
-  
+            except:
+                print("Error %s" % function)
+
+
 
 tester = RaidTester()
 tester()
