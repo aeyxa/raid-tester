@@ -1,6 +1,6 @@
 # Raid Tester
 
-*__This raid_tester.py is a python script used to test raid cards by writing data in multiple ways. Writing both large amounts of data in small counts and small amounts of data in large counts. Once all tests are completed, we then check for any errors using MegaCli.__*
+*__This raid_tester.py is a python script used to test raid cards by writing data in multiple ways. Writing both large amounts of data in small counts and small amounts of data in large counts. Once all tests are completed, we then check for any errors using StorCli.__*
 
 To get this file, on a Linux type environment, you can just use wget:
 ```
@@ -12,7 +12,7 @@ wget https://raw.githubusercontent.com/aeyxa/raid-tester/master/raid_tester.py
 This script expects multiple programs to be installed and accessible on the system:
 
 ```
-MegaCli, python-setuptools, easy_install sh, hdparm, tmux
+StorCli, python-setuptools, easy_install sh, hdparm, tmux
 ```
   
 
