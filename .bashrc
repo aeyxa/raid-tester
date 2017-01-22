@@ -54,7 +54,7 @@ raid_tester_info()
     echo "If the raid you're testing was built on a device "
     echo "other than /dev/sdb, you will need to cancel the "
     echo "automated script, and run it yourself:           "
-    echo "    python ~/raid_tester/raid_tester.py /dev/sd? "
+    echo "    python ~/raid_tester/raid_tester.py /dev/??? "
 
 }
 
