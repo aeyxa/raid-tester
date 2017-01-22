@@ -29,18 +29,33 @@ raid_tester_info()
     echo "    ctrl+b THEN ctrl+% OR ctrl+\"     "
     echo
     echo
-    echo "################################################"
-    echo "                    NOTICE                      "
-    echo "################################################"
+    echo "#################################################"
+    echo "                    NOTICE                       "
+    echo "#################################################"
     echo
-    echo " If you cancel the script and open a new shell, "
-    echo " the script will execute again. To prevent this "
-    echo " script from automatically executing, please    "
-    echo " comment out the 'automatic_raid_tester' bottom "
-    echo " line in vim ~/.bashrc, leaving the other lines "
-    echo " untouched and unchanged.                       "
+    echo " If you cancel the script and open a new shell,  "
+    echo " the script will execute again. To prevent this  "
+    echo " script from automatically executing, please     "
+    echo " comment out the 'automatic_raid_tester' bottom  "
+    echo " line in vim ~/.bashrc, leaving the other lines  "
+    echo " untouched and unchanged.                        "
     echo
-    echo "################################################"
+    echo "#################################################"
+    echo
+    echo
+    echo "When this script finishes, it will display the   "
+    echo "errors that are present. If anything other than  "
+    echo "a zero is on the error list, please move this    "
+    echo "RAID card to RMA location, then place it in the  "
+    echo "closet with a post-it note labeled as RMA, and   "
+    echo "notify your shift-lead, to notify the CTO.       "
+    echo
+    echo
+    echo "If the raid you're testing was built on a device "
+    echo "other than /dev/sdb, you will need to cancel the "
+    echo "automated script, and run it yourself:           "
+    echo "    python ~/raid_tester/raid_tester.py /dev/sd? "
+
 }
 
 automatic_raid_tester()
