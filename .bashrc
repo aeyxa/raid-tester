@@ -11,6 +11,7 @@ if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
+# Not part of the automated script, only used if image is lost
 raid_tester_depend()
 {
         yum install epel-release, wget, vim, tmux -y
@@ -23,7 +24,6 @@ raid_tester_depend()
         cd
         tmux
 }
-
 
 raid_tester_script()
 {
