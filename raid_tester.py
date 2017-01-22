@@ -112,51 +112,51 @@ class RaidTester:
 
 
 
-       def __PhaseThree(self):
+    def __PhaseThree(self):
 
-            def SpeedTest():
-                infile = "if=%s" % self.__output
-                outfile = "of=/dev/null"
-                bs = "bs=1024"
+        def SpeedTest():
+            infile = "if=%s" % self.__output
+            outfile = "of=/dev/null"
+            bs = "bs=1024"
 
-                arguments = [ infile, outfile, bs ]
+            arguments = [ infile, outfile, bs ]
 
-                try:
-                    task = dd(*arguments,_bg=True); task.wait()
-
-                except KeyboardInterrupt:
-                    task.kill()
-
-
-            def ErrorTest():
-                controller_flag = a = "/c0"
-                enclosures_flag = b = "/eall"
-                all_drives_flag = c = "/sall"
-                show_value_flag = d = "show"
-                show_drive_flag = e = "all"
-                
-                storcliArguments = [ a, b, c, d, e ]
-
-                storcli = Command("/opt/MegaRAID/storcli/storcli64")
-
-                display_stor = storcli(*storcliArguments)
-                display_grep = grep(display_stor,"Error")
-
-                print("\n\n%s\n\n" % display_stor)
-
-
-            def CleanTest():
-                rm(self.__output)
-
-
-        functions = [ SpeedTest, ErrorTest, CleanTest ]
-
-        for function in functions:
             try:
-                function()
+                task = dd(*arguments,_bg=True); task.wait()
 
-            except:
-                print("Error %s" % function)
+            except KeyboardInterrupt:
+                task.kill()
+
+
+        def ErrorTest():
+            controller_flag = a = "/c0"
+            enclosures_flag = b = "/eall"
+            all_drives_flag = c = "/sall"
+            show_value_flag = d = "show"
+            show_drive_flag = e = "all"
+
+            storcliArguments = [ a, b, c, d, e ]
+
+            storcli = Command("/opt/MegaRAID/storcli/storcli64")
+
+            display_stor = storcli(*storcliArguments)
+            display_grep = grep(display_stor,"Error")
+
+            print("\n\n%s\n\n" % display_stor)
+
+
+        def CleanTest():
+            rm(self.__output)
+
+
+    functions = [ SpeedTest, ErrorTest, CleanTest ]
+
+    for function in functions:
+        try:
+            function()
+
+        except:
+            print("Error %s" % function)
 
   
 
