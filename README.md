@@ -1,6 +1,6 @@
 # Raid Tester
 
-## THE FIRST PARAGRAPH IS THE MOST IMPORTANT
+### THE FIRST PARAGRAPH IS THE MOST IMPORTANT
 
 *__This raid_tester.py is a python script used to test raid cards by writing data in multiple ways. Writing both large amounts of data in small counts and small amounts of data in large counts. Once all tests are completed, we then check for any errors using StorCli. This script is only intended to work with StorCli on CentOS 7 and assumes you have the necessary dependencies. The .bashrc file is used to automate the process and should be understood before overwriting your own .bashrc file __*
 
@@ -30,5 +30,3 @@ The current testing platform we currently implement would be to create two raid 
 
 ## Warning
 >Failure to create a raid in a correct manner for which this script can write large amounts of data (over 80GB) may result in damage to your file system, such as total operating system loss, failed hard drives and raid card failure. Please do not run this script on an important environment, it should only be used on a stand alone server specifically built for the purposes of testing raid cards.
-
-## THE FIRST PARAGRAPH IS THE MOST IMPORTANT
