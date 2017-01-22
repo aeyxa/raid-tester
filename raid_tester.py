@@ -129,17 +129,20 @@ class RaidTester:
 
 
             def ErrorTest():
-                display_flag = "-CfgDsply"
-                details_flag = "-aALL"
+                controller_flag = a = "/c0"
+                enclosures_flag = b = "/eall"
+                all_drives_flag = c = "/sall"
+                show_value_flag = d = "show"
+                show_drive_flag = e = "all"
+                
+                storcliArguments = [ a, b, c, d, e ]
 
-                MegaCliArguments = [ display_flag, details_flag ]
+                storcli = Command("/opt/MegaRAID/storcli/storcli64")
 
-                MegaCli = Command("/opt/MegaRAID/MegaCli/MegaCli64")
+                display_stor = storcli(*storcliArguments)
+                display_grep = grep(display_stor,"Error")
 
-                display_mega = MegaCli(*MegaCliArguments)
-                display_grep = grep(display_mega,"Error")
-
-                print("\n\n%s\n\n" % display_grep)
+                print("\n\n%s\n\n" % display_stor)
 
 
             def CleanTest():
