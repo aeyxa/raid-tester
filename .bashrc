@@ -11,6 +11,20 @@ if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
+raid_tester_depend()
+{
+        yum install epel-release, wget, vim, tmux -y
+        yum install python-setuptools -y
+        easy_install sh
+        cd
+        mkdir raid_tester
+        cd raid_tester
+        wget https://raw.githubusercontent.com/aeyxa/raid-tester/master/raid_tester.py
+        cd
+        tmux
+}
+
+
 raid_tester_script()
 {
     python ~/raid_tester/raid_tester.py /dev/sdb
