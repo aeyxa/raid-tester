@@ -1,5 +1,5 @@
 import sys
-from sh import dd, hdparm, Command, grep
+from sh import dd, hdparm, Command, grep, rm
 
 class RaidTester:
 
@@ -31,7 +31,7 @@ class RaidTester:
 
         def WriteToAFile():
             infile = "if=/dev/zero"
-            outfile = self.__output
+            outfile = "of=%s" % self.__output
             bytesize = "bs=1G"
             count = "count=80"
             oflag = "oflag=sync"
@@ -142,7 +142,7 @@ class RaidTester:
             display_stor = storcli(*storcliArguments)
             display_grep = grep(display_stor,"Error")
 
-            print("\n\n%s\n\n" % display_stor)
+            print("\n\n%s\n\n" % display_grep)
 
 
         def CleanTest():
