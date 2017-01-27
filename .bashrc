@@ -36,9 +36,6 @@ raid_tester_info()
     echo "Currently running:"
     echo "    python ~/raid_tester/raid_tester.py /dev/sdb"
     echo
-    echo "For more information:"
-    echo "    vim ~/raid_tester/readme.txt"
-    echo
     echo "Tmux command to gain terminal access: "
     echo "    ctrl+b THEN ctrl+% OR ctrl+\"     "
     echo
