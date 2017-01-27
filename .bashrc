@@ -14,7 +14,10 @@ fi
 # Not part of the automated script, only used if image is lost
 raid_tester_depend()
 {
-        yum install epel-release, wget, vim, tmux -y
+        yum update -y
+        yum install epel-release -y
+        yum install hdparm -y
+        yum install tmux -y
         yum install python-setuptools -y
         easy_install sh
         cd
